@@ -1,0 +1,19 @@
+<div class="row">
+  <div class="col-md-5 mx-auto">
+    <div class="card shadow rounded">
+      <div class="card-body">
+        <div class="box">
+          <%= simple_form_for [@user, @report] do |f| %>
+            <%= f.input :titulo, class:"rounded"%>
+            <%= f.hidden_field :contenido, id: "mcontenido" %>
+            <%= f.label :contenido%>
+            <trix-editor input="mcontenido"></trix-editor>
+            <%= f.input :fecha%>
+            <%= f.submit "Enviar", class:"btn btn-primary shadow"%>
+          <%end%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 

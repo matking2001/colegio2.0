@@ -1,0 +1,40 @@
+<div class="row">
+  <div class="col-md-4 mx-auto mt-5">
+    <h2 class="text-center">Registrate</h2>
+    <p class="text-center">O <%= link_to "Inicia sesión" , new_session_path(resource_name) %></p>
+    <div class="card border-info">
+      <div class="card-body">
+        <div class="box">
+
+          <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= f.error_notification %>
+
+            <div class="form-inputs">
+              <%= f.input :email,
+                          required: true,
+                          autofocus: true,
+                          input_html: { autocomplete: "email" }%>
+              <%= f.input :password,
+                          required: true,
+                          hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                          input_html: { autocomplete: "new-password" } %>
+              <%= f.input :password_confirmation,
+                          required: true,
+                          input_html: { autocomplete: "new-password" } %>
+            </div>
+
+            <div class="form-actions">
+              <div class="d-flex justify-content-center">
+                <div class="form-actions">
+                  <%= f.button :submit, "Registrate", class: "logbtn" %>
+                </div>
+              </div>
+            </div>
+          <% end %>
+
+          <%# render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

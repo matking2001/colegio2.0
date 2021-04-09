@@ -1,0 +1,118 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ *= require trix
+ */
+
+ @import "bootstrap";
+ @import 'font_awesome5_webfont';
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+ *{
+    font-family: 'Poppins', sans-serif;
+ }
+
+ // Inicio de login
+.login-box{
+   height: 340px;
+ }
+
+ .image{
+   margin-top: -30px;
+ }
+
+.textbox{
+  width: 100%;
+  overflow: hidden;
+  font-size: 18px;
+  padding: 8px 0;
+  margin: 8px 0;
+  border-bottom: 2px solid #34495e;
+  margin-bottom: 40px
+}
+
+.icon{
+  color: #34495e;
+}
+
+.iconeye{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.textbox input{
+  width: 90%;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.textbox span::before{
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  color: #adadad;
+  transform: translateY(-50%);
+  z-index: -1;
+  transition: .5s;
+}
+
+.textbox span::after{
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: linear-gradient(120deg,#3498db,#8e44ad);
+  transition: .5s;
+}
+
+.focus + span::before{
+  top: -5px;
+}
+.focus + span::after{
+  width: 100%;
+}
+
+
+.logbtn{
+  width: 180px;
+  height: 45px;
+  border: none;
+  background: none;
+  border: 4px solid #0984e3;
+  color: #0984e3;
+  border-radius: 20px 20px 20px 20px;
+  font-size: 18px bold;
+}
+
+.forgetbox{
+  height: 150px;
+}
+
+.signin{
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: none;
+  background: linear-gradient(#0984e3,#3498db,#2980b9);
+  color: white;
+  border-radius: 5px;
+}
+
+.t-credential{
+   color: #34495e;
+   font-family: sans-serif;
+   font-size: 18px;
+}
+// fin de login

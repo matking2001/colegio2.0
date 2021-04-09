@@ -1,0 +1,7 @@
+<tr>
+    <td><%= link_to report.titulo, user_report_path(@user, report) %></td>
+    <td><%= sanitize report.contenido %></td>
+    <td><%= report.fecha %></td>
+    <td><%= link_to "Editar", edit_user_report_path(@user, report) %></td>
+    <td><%= link_to "Eliminar", user_report_path(@user, report),method: :delete, data: {confirm: "¿Estas seguro de eliminar esta anotación.?"} %></td>
+</tr>

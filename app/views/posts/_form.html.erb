@@ -1,0 +1,10 @@
+<div class="card shadow rounded">
+  <div class="card-body">
+    <%= simple_form_for(@post) do |f| %>
+      <%= f.input :titulo, class:"rounded"%>
+      <%= f.input :contenido, class:"rounded"%>
+      <%= f.input :fecha%>
+      <%= f.submit "Publicar", class:"btn btn-primary shadow"%>
+    <%end%>
+  </div>
+</div>

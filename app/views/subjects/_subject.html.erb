@@ -1,0 +1,6 @@
+<tr>
+    <td><%= subject.codigo %></td>
+    <td><%= subject.nombre %></td>
+    <td><%= link_to "Editar", edit_user_subject_path(@user, subject) %></td>
+    <td><%= link_to "Eliminar", user_subject_path(@user, subject), method: :delete, data:{ confirm: "¿Estas seguro de eliminar esta materia?" } %></td>
+</tr>

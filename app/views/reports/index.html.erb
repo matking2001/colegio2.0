@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-10 mt-5 mx-auto">
+            <div class="card rounded shadow-lg">
+                <div class="card-body">
+                    <div class="box">
+                        <%= link_to  "Generar reporte", new_user_report_path(@user, @report), class: "btn btn-info btn-sm mb-2" %>
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <th>Titulo:</th>
+                                    <th>Contenido:</th>
+                                    <th>Fecha:</th>
+                                    <th>Editar:</th>
+                                    <th>Eliminar:</th>
+                                </thead>
+                                <tbody>
+                                    <%= render @reports %>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
