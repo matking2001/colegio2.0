@@ -7,4 +7,5 @@ class User < ApplicationRecord
   # Relación con reportes
   has_many :reports    
   has_many :subjects 
+  belongs_to :classroom
 end
