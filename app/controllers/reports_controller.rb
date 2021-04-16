@@ -43,7 +43,7 @@ class ReportsController < ApplicationController
     flash.alert = "Anotación eliminada"
     redirect_to user_reports_path(@user)
   end
-
+  
   private
 
   def set_user

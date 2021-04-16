@@ -1,0 +1,33 @@
+<div class="row">
+    <div class="col-md-5 mt-5 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <div class="box">
+            <%= simple_form_for(@user) do |f| %> 
+            <%= f.input :email %>
+
+            <div class="row">
+              <div class="col"><%= f.input :password %></div>
+              <div class="col"><%= f.input :password_confirmation %></div>
+            </div>
+  
+            <div class="row">
+              <div class="col">
+                <div class="d-flex justify-content-center">
+                  <%= f.button :submit, class: "btn-primary btn-block" %>
+                </div>
+              </div>
+  
+              <div class="col">
+                <div class="d-flex justify-content-center">
+                  <%= link_to 'Regresar' , users_path, class: "btn
+                  btn-warning btn-block" %>
+                </div>
+              </div>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

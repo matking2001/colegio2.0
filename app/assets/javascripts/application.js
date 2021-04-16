@@ -17,4 +17,5 @@
 //= require popper
 //= require bootstrap-sprockets
 //= require trix
+//= require toastr/toastr.min.js
 //= require_tree .

@@ -1,2 +1,17 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="row">
+    <div class="col-md-5 mt-5 mx-auto">
+        <div class="card shadow-lg">
+            <div class="card-body">
+                <div class="box">
+                    <h3 class="text-center">Datos del usuario</h3>
+                    <h5><strong>Email: </strong><b> </b><%= @user.email %></h5>
+
+                    <div class="row">
+                        <div class="col"><%= link_to "Regresar", users_path(@user), class: "btn btn-success btn-sm btn-block" %></div>
+                        <div class="col"><%= link_to "Editar", edit_user_path(@user), class: "btn btn-info btn-sm btn-block" %></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
